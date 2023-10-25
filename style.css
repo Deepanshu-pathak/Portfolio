@@ -94,7 +94,26 @@
   justify-content: left;
   align-items: center;
   gap: 15rem;
-  background-color: #95f8f1;
+  background: rgb(242, 80, 219);
+  background: linear-gradient(
+    90deg,
+    rgba(79, 255, 183, 1) 0%,
+    rgba(0, 255, 206, 1) 20%,
+    rgba(0, 159, 255, 1) 40%,
+    rgba(90, 113, 255, 1) 60%,
+    rgba(156, 99, 255, 1) 80%,
+    rgba(242, 80, 219, 1) 100%
+  );
+  background-size: 300rem;
+  animation: ani 15s linear infinite alternate;
+}
+@keyframes ani {
+  from {
+    background-position: left;
+  }
+  to {
+    background-position: right;
+  }
 }
 .me img{
   width: 40rem;
@@ -117,6 +136,7 @@
 .box img{
   width: 3rem;
 }
+
 .project{
   font-size: larger;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -126,12 +146,19 @@
   margin: 1rem 28rem;
   padding: 0.5rem;
 }
-.prolist{
+.projectcontainer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.prolist{
+  display: flex;
+  justify-content: left;
+  align-items: stretch;
   gap: 3rem;
   margin: 3rem;
+  overflow: scroll;
+  width: 80%;
 }
 .list img:hover{
   translate: 0 -8px;
